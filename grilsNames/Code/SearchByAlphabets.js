@@ -114,7 +114,7 @@ const NamesByAlphabetsScreen = () => {
                 </View>
               </View>
             ))}
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleLoadMore}>
               {loading2 && <Text style={styles.loadMore}>Loading...</Text>}
               {!id && <Text style={styles.welcome}>
                 WELCOME

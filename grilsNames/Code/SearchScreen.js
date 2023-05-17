@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, TextInput, Clipboard, Image, ScrollView, TouchableOpacity, Alert } from 'react-native'
 import Loader from './Loader';
+
 import { styles } from './TrendingNameScreen';
 import { InterstitialAd, BannerAd, TestIds, BannerAdSize, AdEventType } from 'react-native-google-mobile-ads';
 const SearchScreen = () => {

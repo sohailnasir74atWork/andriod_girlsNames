@@ -6,7 +6,7 @@ function HomeScreen({ navigation }) {
   const shareApp = async () => {
     try {
       const result = await Share.share({
-        message: 'Check out my awesome app: https://yourappurl.com',
+        message: 'Check out my awesome app: https://play.google.com/store/apps/details?id=com.grilsnames&referrer=utm_source%3Dshare',
       });
     } catch (error) {
       // console.log(error.message);
@@ -16,15 +16,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ height: "90%" }}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('SEARCH NAME')}
-          style={styles.button}>
-          <View style={styles.buttonCont}>
-            <Text style={styles.text}>SEARCH NAME</Text>
-            <Text style={styles.text}>نام تلاش کریں</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
+      <TouchableOpacity
           onPress={() => navigation.navigate('SEARCH BY ALPHABETS')}
           style={styles.button}>
           <View style={styles.buttonCont}>
@@ -42,7 +34,15 @@ function HomeScreen({ navigation }) {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => Linking.openURL('https://your-privacy-policy-url.com')}
+          onPress={() => navigation.navigate('SEARCH NAME')}
+          style={styles.button}>
+          <View style={styles.buttonCont}>
+            <Text style={styles.text}>SEARCH NAME</Text>
+            <Text style={styles.text}>نام تلاش کریں</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://play.google.com/store/apps/details?id=com.grilsnames')}
           style={styles.button}>
           <View style={styles.buttonContLast}>
             <Text style={styles.text}>RATE US ⭐⭐⭐⭐⭐</Text>
